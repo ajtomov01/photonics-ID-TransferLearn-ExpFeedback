@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "photonics-id"
+version = "0.1.0"
+description = "Physics-Informed Inverse Design, Sim-to-Real Transfer Learning, and Experimental Feedback for Integrated Photonics"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Aiden Tomov" }
+]
+keywords = [
+    "photonics",
+    "inverse-design",
+    "mmi",
+    "transfer-learning",
+    "machine-learning",
+    "cvae",
+    "domain-adaptation",
+    "physics-informed"
+]
+dependencies = [
+    "torch>=2.0.0",
+    "numpy>=1.22.0",
+    "scipy>=1.9.0",
+    "pandas>=1.4.0",
+    "scikit-learn>=1.0.0",
+    "matplotlib>=3.5.0",
+    "pyyaml>=6.0",
+    "tqdm>=4.64.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

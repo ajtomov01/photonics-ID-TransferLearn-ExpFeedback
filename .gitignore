@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Caches and Environments
+.pytest_cache/
+.coverage
+htmlcov/
+.env
+.venv/
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Model Weights & Checkpoints (Keeping proprietary weights close to vest)
+*.pt
+*.pth
+*.bin
+*.onnx
+*.safetensors
+*.ckpt
+weights/
+models_checkpoints/
+
+# Raw Photonics Simulation & Large Engineering Files (>100MB / proprietary)
+*.fsp
+*.fsp_Sparams.mat
+*.mat
+*.asv
+*.log
+*.h5
+*.hdf5
+Lc_Collections/
+DomainShift/
+ActiveLearn/
+Runs/
+workflow_outputs/
+
+# Large Datasets (unless explicitly committed in data/sample/)
+data/*.csv
+!data/sample_mmi_dataset.csv

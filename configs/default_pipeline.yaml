@@ -1,0 +1,36 @@
+# Configuration for Photonics Inverse Design & Adaptation Pipeline
+
+dataset:
+  n_wavelengths: 10
+  val_split: 0.15
+  test_split: 0.15
+  batch_size: 128
+  seed: 42
+
+surrogate:
+  width: 512
+  depth: 5
+  dropout: 0.05
+  lr: 3.0e-4
+  weight_decay: 2.5e-4
+  epochs: 200
+  physics_weight: 0.25
+
+cvae:
+  z_dim: 16
+  width: 512
+  depth: 4
+  dropout: 0.05
+  lr: 3.0e-4
+  beta_start: 0.0
+  beta_end: 7.0e-3
+  beta_warmup: 40
+  epochs: 250
+
+adaptation:
+  method: "warp" # "warp" or "residual"
+  warp_scale: 0.05
+  warp_hidden: 64
+  head_hidden: 64
+  lr: 1.0e-3
+  epochs: 100
